@@ -1,7 +1,29 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+	<title>Hardware/Software Developer, 🔧⚙️🤖 Mechanical, ⚡🔌📡 Electical, 👨‍💻🔗🗄 IT, 🎨💪🚀 Simulation</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+	<h1>Hello World</h1>
+	<p>I'm hosted with GitHub Pages.</p>
+	<div id="content"></div>
+	<!--download from site, CDN, then enable the marked MD interpreter-->
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	<script>
+		fetch('./front.md') // gets through CORS
+			.then(response => response.text())
+			.then(data =>
+				document.getElementById('content').innerHTML = marked.parse(data));
+		// next: apply frame and simple CSS for adaption
+		// structure the HTML files together with MD
+		// put the modules of past here and add contents step by step
+		// gallery to show the new JS technique: from basic graphics to typical
+		// 
+	</script>
+
 </body>
+
 </html>
